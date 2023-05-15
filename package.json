@@ -2,16 +2,19 @@
   "name": "domesticservices",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "start": "nodemon index.js"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
+    "pg": "^8.11.0",
+    "sequelize": "^6.31.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
