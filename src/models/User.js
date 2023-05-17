@@ -33,7 +33,7 @@ module.exports = (sequilize) => {
             }
         },
         location: {
-            type: DataTypes.JSON,
+            type: DataTypes.JSONB,
             allowNull: false,
         },
         phone: {

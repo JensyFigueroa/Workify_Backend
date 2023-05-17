@@ -17,7 +17,7 @@ module.exports = (sequilize) => {
             allowNull: false,
         },
         location: {
-            type: DataTypes.JSON,
+            type: DataTypes.JSONB,
             allowNull: false,
         },
         imagePublicId: {
@@ -35,7 +35,7 @@ module.exports = (sequilize) => {
             allowNull: false,
         },
         contracts: {
-            type: DataTypes.ARRAY(DataTypes.JSON),
+            type: DataTypes.ARRAY(DataTypes.JSONB),
             allowNull: false,
         },
         typeService: {
@@ -43,7 +43,7 @@ module.exports = (sequilize) => {
             allowNull: false,
         },
         reviews: {
-            type: DataTypes.JSON,
+            type: DataTypes.JSONB,
             unique: true,
         }
     })
