@@ -1,10 +1,10 @@
 const { Router } = require('express');
-const client = require('./client');
+const user = require('./user');
 const service = require('./service');
 
 const router = Router();
 
-router.use('/', client);
+router.use('/', user);
 
 router.use('/', service);
 

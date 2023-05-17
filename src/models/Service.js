@@ -6,7 +6,7 @@ module.exports = (sequilize) => {
             type: DataTypes.UUID,
             allowNull: false,
             primaryKey: true,
-            defaultValue: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV1,
         },
         nameService: {
             type: DataTypes.STRING,
@@ -16,10 +16,10 @@ module.exports = (sequilize) => {
             type: DataTypes.DATE,
             allowNull: false,
         },
-        // location: {
-        //     type: DataTypes.JSON,
-        //     allowNull: false,
-        // },
+        location: {
+            type: DataTypes.JSON,
+            allowNull: false,
+        },
         imagePublicId: {
             type: DataTypes.ARRAY(DataTypes.STRING),
         },
@@ -42,9 +42,9 @@ module.exports = (sequilize) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        // reviews: {
-        //     type: DataTypes.JSON,
-        //     unique: true,
-        // }
+        reviews: {
+            type: DataTypes.JSON,
+            unique: true,
+        }
     })
 };

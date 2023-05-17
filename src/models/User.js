@@ -6,7 +6,7 @@ module.exports = (sequilize) => {
             type: DataTypes.UUID,
             allowNull: false,
             primaryKey: true,
-            defaultValue: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV1,
         },
         name: {
             type: DataTypes.STRING,
@@ -32,10 +32,10 @@ module.exports = (sequilize) => {
                 max: 120,
             }
         },
-        // location: {
-        //     type: DataTypes.JSON,
-        //     allowNull: false,
-        // },
+        location: {
+            type: DataTypes.JSON,
+            allowNull: false,
+        },
         phone: {
             type: DataTypes.INTEGER,
             allowNull: false,
