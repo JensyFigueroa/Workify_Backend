@@ -12,10 +12,6 @@ module.exports = (sequilize) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        date: {
-            type: DataTypes.DATE,
-            allowNull: false,
-        },
         location: {
             type: DataTypes.JSONB,
             allowNull: false,
@@ -30,21 +26,19 @@ module.exports = (sequilize) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        pricePerHoure: {
+        pricePerHour: {
             type: DataTypes.FLOAT,
             allowNull: false,
         },
         contracts: {
-            type: DataTypes.ARRAY(DataTypes.JSONB),
-            allowNull: false,
+            type: DataTypes.ARRAY(DataTypes.JSONB)
         },
         typeService: {
             type: DataTypes.STRING,
             allowNull: false,
         },
         reviews: {
-            type: DataTypes.JSONB,
-            unique: true,
+            type: DataTypes.JSONB
         }
     })
 };
