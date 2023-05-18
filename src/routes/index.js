@@ -1,11 +1,13 @@
 const { Router } = require('express');
-const user = require('./user');
-const service = require('./service');
+const userRouter = require('./userRouter');
+const serviceRouter = require('./serviceRouter');
 
 const router = Router();
 
-router.use('/', user);
+console.log('Estoy en el index de routes');
 
-router.use('/', service);
+router.use('/user', userRouter);
+
+router.use('/service', serviceRouter);
 
 module.exports = router;
