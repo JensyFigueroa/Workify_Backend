@@ -5,11 +5,11 @@ const service = Router();
 
 console.log("Estoy en el router de service");
 
-service.get('/service', getServicesDB)
+service.get('/', getServicesDB)
 
 service.get('/:idService', getServiceDetailById)
 
-service.post('/service', postService)
+service.post('/', postService)
 
 
 module.exports = service;
