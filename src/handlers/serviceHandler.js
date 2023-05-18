@@ -2,6 +2,7 @@ const { Service, User } = require('../db.js');
 const { filterServiceId } = require('../controllers/getServicesById.js')
 const { getServices } = require('../controllers/getServices.js')
 const{ createService } =require('../controllers/createService.js')
+const { getServiceByName } = require('../controllers/getServiceByName.js')
 
 
 const getServicesDB = async (req, res) => {
@@ -11,8 +12,23 @@ const getServicesDB = async (req, res) => {
     try {
 
         const services = await getServices();
-
         res.status(200).json(services);
+
+    } catch (error) {
+        return res.status(404).json({ error: error.message });
+    }
+};
+
+const getServicesByName = async (req, res) => {
+    const { name } = req.query;
+
+    console.log('Estoy en el handler de service/name');
+
+    try {
+
+        const serviceByName = await getServiceByName(name)
+
+        res.status(200).json(serviceByName);
 
     } catch (error) {
         return res.status(404).json({ error: error.message });
@@ -49,5 +65,5 @@ const postService = async (req, res) => {
     }
 };
 
-module.exports = { getServiceDetailById, getServicesDB, postService };
+module.exports = { getServiceDetailById, getServicesDB, postService, getServicesByName };
 

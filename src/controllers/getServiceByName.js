@@ -1,8 +1,15 @@
 const { Service, User } = require('../db.js');
+const { Op } = require('sequelize');
 
-const getServices = async () => {
+const getServiceByName = async (name) => {
+    console.log(name)
 
-    const dbServices = await Service.findAll({
+    const dbServicesByName = await Service.findAll({
+        where: {
+            nameService: {
+                [Op.iLike]: `%${name}%`
+            }
+        },
         include: [{
             model: User,
             attributes: ['name', 'email'],
@@ -11,7 +18,7 @@ const getServices = async () => {
             }
         }]
     });
-    const services = dbServices.map(service => {
+    const servicesByName = dbServicesByName.map(service => {
         return {
             id: service.id,
             nameService: service.nameService,
@@ -25,7 +32,7 @@ const getServices = async () => {
 
     //console.log(services, "que tengo en la base de datos filtrados")
 
-    return services;
+    return servicesByName;
 
 }
-module.exports = { getServices }
+module.exports = { getServiceByName }
