@@ -10,7 +10,7 @@ const getServices = async () => {
             "pais": "Colombia",
             "ciudad": "Armenia"
           },
-          "imageUrl": ["https://www.mascotas.com/wp-content/uploads/2020/01/corte-de-pelo-mascotas.jpg"],
+          "imageUrl": ["https://img.freepik.com/vector-premium/tierra-llamas-alta-temperatura_1639-44032.jpg"],
           "description": "Corte de pelo para perros y gatos",
           "pricePerHour": 10,
           "typeService": "Peluqueria"
@@ -21,7 +21,7 @@ const getServices = async () => {
             "pais": "Colombia",
             "ciudad": "Bogotá"
           },
-          "imageUrl": ["https://example.com/remodelacion-cocina.jpg"],
+          "imageUrl": ["https://img.freepik.com/vector-premium/tierra-llamas-alta-temperatura_1639-44032.jpg"],
           "description": "Servicio de remodelación de cocinas",
           "pricePerHour": 50,
           "typeService": "Construccion"
@@ -32,7 +32,7 @@ const getServices = async () => {
             "pais": "Colombia",
             "ciudad": "Medellín"
           },
-          "imageUrl": ["https://example.com/reparacion-tuberias.jpg"],
+          "imageUrl": ["https://img.freepik.com/vector-premium/tierra-llamas-alta-temperatura_1639-44032.jpg"],
           "description": "Reparación y mantenimiento de tuberías",
           "pricePerHour": 30,
           "typeService": "Plomeria"
@@ -43,7 +43,7 @@ const getServices = async () => {
             "pais": "Colombia",
             "ciudad": "Cali"
           },
-          "imageUrl": ["https://example.com/pintura-interiores.jpg"],
+          "imageUrl": ["https://img.freepik.com/vector-premium/tierra-llamas-alta-temperatura_1639-44032.jpg"],
           "description": "Servicio de pintura de interiores",
           "pricePerHour": 40,
           "typeService": "Pintura"
@@ -54,7 +54,7 @@ const getServices = async () => {
             "pais": "Colombia",
             "ciudad": "Barranquilla"
           },
-          "imageUrl": ["https://example.com/diseno-estructural.jpg"],
+          "imageUrl": ["https://img.freepik.com/vector-premium/tierra-llamas-alta-temperatura_1639-44032.jpg"],
           "description": "Diseño estructural de edificaciones",
           "pricePerHour": 80,
           "typeService": "Ingenieria"
@@ -65,7 +65,7 @@ const getServices = async () => {
             "pais": "Colombia",
             "ciudad": "Cartagena"
           },
-          "imageUrl": ["https://example.com/diseno-arquitectonico.jpg"],
+          "imageUrl": ["https://img.freepik.com/vector-premium/tierra-llamas-alta-temperatura_1639-44032.jpg"],
           "description": "Servicio de diseño arquitectónico",
           "pricePerHour": 70,
           "typeService": "Arquitectura"
