@@ -1,14 +1,10 @@
-const { Router } = require('express');
-
-const user = Router();
-
-user.get('/user', (req, res) => {
-    res.send('estoy en cliente');
-});
-
-// cliente.post('/user', (req, res) => {
-//     res.send('cree un cliente');
-// })
+// const { Router } = require('express');
+// const { registerUser, getUserDetailById } = require('../handlers/userHandler.js');
 
 
-module.exports = user;
+// const user = Router();
+
+// service.get('/:idUser', getUserDetailById)
+// service.post('/', registerUser)
+
+// module.exports = user;

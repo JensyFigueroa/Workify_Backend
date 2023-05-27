@@ -15,6 +15,7 @@ const getServicesDB = async (req, res) => {
         res.status(200).json(services);
 
     } catch (error) {
+        console.log(error);
         return res.status(404).json({ error: error.message });
     }
 };
@@ -61,6 +62,7 @@ const postService = async (req, res) => {
         res.status(200).json(newService);
 
     } catch (error) {
+        console.log(error);
         return res.status(404).json({error});
     }
 };

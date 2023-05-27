@@ -3,10 +3,9 @@ const { DataTypes } = require('sequelize');
 module.exports = (sequilize) => {
     sequilize.define('User', {
         id: {
-            type: DataTypes.UUID,
+            type: DataTypes.STRING,
             allowNull: false,
             primaryKey: true,
-            defaultValue: DataTypes.UUIDV1,
         },
         name: {
             type: DataTypes.STRING,
@@ -16,32 +15,18 @@ module.exports = (sequilize) => {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
-            validate: {
-                isEmail: true
-            },
         },
-        password: {
+        country: {
             type: DataTypes.STRING,
-            allowNull: false,
+           
         },
-        age: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                min: 18,
-                max: 120,
-            }
-        },
-        location: {
-            type: DataTypes.JSONB,
-            allowNull: false,
+        city: {
+            type: DataTypes.STRING,
+            
         },
         phone: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        expertice: {
-            type: DataTypes.ARRAY(DataTypes.STRING),
+            type: DataTypes.STRING,
+            
         },
         credential: {
             type: DataTypes.ARRAY(DataTypes.STRING)
@@ -54,11 +39,11 @@ module.exports = (sequilize) => {
         },
         adminStatus: {
             type: DataTypes.BOOLEAN,
-            allowNull: false,
+            
         },
         description: {
             type: DataTypes.STRING,
-            allowNull: false,
+            
         },
         portfolio: {
             type: DataTypes.STRING,
