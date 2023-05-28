@@ -5,7 +5,7 @@ const { createService } = require('./createService.js');
 const getServices = async () => {
   const servicesForTesting = [
     {
-            "nameService": "Corte de pelo",
+            "nameService": "Hair Cut",
             "location": {
               "pais": "Colombia",
               "ciudad": "Armenia"
@@ -13,7 +13,7 @@ const getServices = async () => {
             "imageUrl": ["https://img.freepik.com/vector-premium/patron-fisuras-corte-pelo-afeitado-barbershop-barber-hombre_82574-12065.jpg"],
             "description": "Corte de pelo para perros y gatos",
             "pricePerHour": 10,
-            "typeService": "Peluqueria",
+            "typeService": "Personal Care",
             "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
@@ -25,7 +25,7 @@ const getServices = async () => {
             "imageUrl": ["https://duomostore.cl/wp-content/uploads/2022/09/remodelacion-cocinas-pequenas.jpg"],
             "description": "Servicio de remodelación de cocinas",
             "pricePerHour": 50,
-            "typeService": "Construccion",
+            "typeService": "Construction",
             "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
@@ -37,7 +37,7 @@ const getServices = async () => {
             "imageUrl": ["https://ferreteriavidri.com/public/blog/media/files/Reparaciontubo-01.png"],
             "description": "Reparación y mantenimiento de tuberías",
             "pricePerHour": 30,
-            "typeService": "Plomeria",
+            "typeService": "Sewage",
             "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
@@ -49,7 +49,7 @@ const getServices = async () => {
             "imageUrl": ["https://cdn.homedepot.com.mx/contentMarketing/Tips_Compra/241_Pintura/TC_D241_12/images/pintar-sala.jpg"],
             "description": "Servicio de pintura de interiores",
             "pricePerHour": 40,
-            "typeService": "Pintura",
+            "typeService": "Paint",
             "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
@@ -61,7 +61,7 @@ const getServices = async () => {
             "imageUrl": ["https://concadi.com/wp-content/uploads/2021/02/edificiobim-850x550.jpg"],
             "description": "Diseño estructural de edificaciones",
             "pricePerHour": 80,
-            "typeService": "Ingenieria",
+            "typeService": "Engineering",
             "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
@@ -73,7 +73,7 @@ const getServices = async () => {
             "imageUrl": ["https://www.arquitecturapura.com/wp-content/uploads/2018/05/El-dise%C3%B1o-arquitect%C3%B3nico.jpg"],
             "description": "Servicio de diseño arquitectónico",
             "pricePerHour": 70,
-            "typeService": "Arquitectura",
+            "typeService": "Arquitecture",
             "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           }
   ];
