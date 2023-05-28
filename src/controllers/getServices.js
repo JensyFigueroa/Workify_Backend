@@ -14,7 +14,7 @@ const getServices = async () => {
             "description": "Corte de pelo para perros y gatos",
             "pricePerHour": 10,
             "typeService": "Peluqueria",
-            "UserId": "DVXCCa8EMgei9Q5lVM2XtzQg3ok2"
+            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
             "nameService": "Remodelación de cocina",
@@ -26,7 +26,7 @@ const getServices = async () => {
             "description": "Servicio de remodelación de cocinas",
             "pricePerHour": 50,
             "typeService": "Construccion",
-            "UserId": "DVXCCa8EMgei9Q5lVM2XtzQg3ok2"
+            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
             "nameService": "Reparación de tuberías",
@@ -38,7 +38,7 @@ const getServices = async () => {
             "description": "Reparación y mantenimiento de tuberías",
             "pricePerHour": 30,
             "typeService": "Plomeria",
-            "UserId": "DVXCCa8EMgei9Q5lVM2XtzQg3ok2"
+            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
             "nameService": "Pintura de interiores",
@@ -50,7 +50,7 @@ const getServices = async () => {
             "description": "Servicio de pintura de interiores",
             "pricePerHour": 40,
             "typeService": "Pintura",
-            "UserId": "DVXCCa8EMgei9Q5lVM2XtzQg3ok2"
+            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
             "nameService": "Diseño estructural",
@@ -62,7 +62,7 @@ const getServices = async () => {
             "description": "Diseño estructural de edificaciones",
             "pricePerHour": 80,
             "typeService": "Ingenieria",
-            "UserId": "DVXCCa8EMgei9Q5lVM2XtzQg3ok2"
+            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
             "nameService": "Diseño arquitectónico",
@@ -74,12 +74,12 @@ const getServices = async () => {
             "description": "Servicio de diseño arquitectónico",
             "pricePerHour": 70,
             "typeService": "Arquitectura",
-            "UserId": "DVXCCa8EMgei9Q5lVM2XtzQg3ok2"
+            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           }
   ];
 
   const dbFull = await Service.findAll();
-  console.log(dbFull, "dbFull");
+  // console.log(dbFull, "dbFull");
 
   if (dbFull.length === 0) {
     console.log('hola if db vacio');

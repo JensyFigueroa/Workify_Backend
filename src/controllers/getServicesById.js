@@ -16,7 +16,7 @@ const filterServiceId = async (id) => {
         throw new Error('Service not found')
     }
     
-    const { imageUrl, nameService, typeService, description, location, reviews } = servicefiltered;
+    const { imageUrl, nameService, typeService, description, location, reviews, pricePerHour, UserId } = servicefiltered;
 
         const serviceDetail = {
             imageUrl,
@@ -24,7 +24,9 @@ const filterServiceId = async (id) => {
             typeService,
             description,
             location,
-            reviews
+            reviews,
+            pricePerHour,
+            UserId
         };
 
     return serviceDetail;
