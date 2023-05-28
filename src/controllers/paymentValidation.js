@@ -15,12 +15,14 @@ const paymentValidation = async (id, amount, cartsItems, userId) => {
         confirm: true
     })
 
-    const user = User.findByPk(userId);
-    const userName = user.name;
+    const userClient = await User.findByPk(userId);
+    
+    const userName = userClient.name;
 
 
-    await cartsItems.map(async (service)=>{
-      let filaService = Service.findByPk(service.id)
+    await Promise.all(cartsItems.map(async (service)=>{
+
+      let filaService = await Service.findByPk(service.id)
 
       const contract = {
         contratistName: userName,
@@ -28,18 +30,36 @@ const paymentValidation = async (id, amount, cartsItems, userId) => {
         pay: (service.pricePerHour*service.quantity)
       }
 
-      filaService.contracts = [...filaService.contracts, contract];
-      await filaService.save();
+      let aux = filaService.contracts;
+
+      if (!aux){
+        filaService.contracts = [contract];
+        console.log('filaService.contracts: ',filaService.contracts);
+      }else{
+        aux.push(contract);
+        filaService.contracts = aux;
+        console.log('filaService.contracts: ',filaService.contracts);
+      }
 
       const invoice = {
-        serviceName: service.name,
+        nameService: service.nameService,
         contracthours: service.quantity,
         pay: (service.pricePerHour*service.quantity)
       }
 
-      user.buys = [...user.buys, invoice]
-      await user.save();
-    })    
+      let aux2 = userClient.buys;
+
+      if (!aux2){
+        userClient.buys = [invoice];
+        console.log('userClient.buys: ',userClient.buys);
+      }else{
+        aux2.push(invoice);
+        userClient.buys = aux2;
+        console.log('userClient.buys: ',userClient.buys);
+      }
+      await filaService.save();
+      await userClient.save();
+    }))
 
     const message = 'Succesfull payment'
     return message
