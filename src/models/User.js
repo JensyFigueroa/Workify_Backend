@@ -43,6 +43,9 @@ module.exports = (sequilize) => {
         },
         portfolio: {
             type: DataTypes.STRING,
+        },
+        buys: {
+            type: DataTypes.ARRAY(DataTypes.JSONB)
         }
     })
 };
