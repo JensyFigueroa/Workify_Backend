@@ -15,6 +15,8 @@ const paymentValidation = async (id, amount, cartsItems, userId) => {
         confirm: true
     })
 
+    console.log('si me lees, significa que pasaste el filtro de comprobación de pago');
+
     const userClient = await User.findByPk(userId);
     
     const userName = userClient.name;
@@ -25,37 +27,28 @@ const paymentValidation = async (id, amount, cartsItems, userId) => {
       let filaService = await Service.findByPk(service.id)
 
       const contract = {
+        pay: (service.pricePerHour*service.quantity),
         contratistName: userName,
-        contracthours: service.quantity,
-        pay: (service.pricePerHour*service.quantity)
+        contracthours: service.quantity
       }
 
-      let aux = filaService.contracts;
-
-      if (!aux){
+      if (filaService.contracts===null){
         filaService.contracts = [contract];
-        console.log('filaService.contracts: ',filaService.contracts);
       }else{
-        aux.push(contract);
-        filaService.contracts = aux;
-        console.log('filaService.contracts: ',filaService.contracts);
+        filaService.contracts =[...filaService.contracts, contract]
       }
 
       const invoice = {
+        pay: (service.pricePerHour*service.quantity),
         nameService: service.nameService,
         contracthours: service.quantity,
-        pay: (service.pricePerHour*service.quantity)
       }
 
-      let aux2 = userClient.buys;
 
-      if (!aux2){
+      if (userClient.buys===null){
         userClient.buys = [invoice];
-        console.log('userClient.buys: ',userClient.buys);
       }else{
-        aux2.push(invoice);
-        userClient.buys = aux2;
-        console.log('userClient.buys: ',userClient.buys);
+        userClient.buys = [...userClient.buys, invoice]
       }
       await filaService.save();
       await userClient.save();

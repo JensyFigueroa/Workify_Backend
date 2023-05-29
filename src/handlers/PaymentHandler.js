@@ -6,7 +6,7 @@ const checkOutPayment = async (req, res)=>{
         const validatePayment = await paymentValidation(id, amount, cartItems, userId);
         res.status(200).json(validatePayment)
     } catch (error) {
-        console.log(error);
+        console.log(error.message);
         res.json(error.message)
     }
 }
