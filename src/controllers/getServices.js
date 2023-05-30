@@ -14,67 +14,67 @@ const getServices = async () => {
             "description": "Corte de pelo para perros y gatos",
             "pricePerHour": 10,
             "typeService": "Personal Care",
-            "UserId": 'DVXCCa8EMgei9Q5lVM2XtzQg3ok2'
+            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
-            "nameService": "Remodelación de cocina",
+            "nameService": "Kitchen Make Over.",
             "location": {
               "pais": "Colombia",
               "ciudad": "Bogotá"
             },
             "imageUrl": ["https://duomostore.cl/wp-content/uploads/2022/09/remodelacion-cocinas-pequenas.jpg"],
-            "description": "Servicio de remodelación de cocinas",
+            "description": "Kitchen Make Over",
             "pricePerHour": 50,
             "typeService": "Construction",
-            "UserId": 'DVXCCa8EMgei9Q5lVM2XtzQg3ok2'
+            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
-            "nameService": "Reparación de tuberías",
+            "nameService": "Seweage Repairs",
             "location": {
               "pais": "Colombia",
               "ciudad": "Medellín"
             },
             "imageUrl": ["https://ferreteriavidri.com/public/blog/media/files/Reparaciontubo-01.png"],
-            "description": "Reparación y mantenimiento de tuberías",
+            "description": "Seweage Repairs",
             "pricePerHour": 30,
             "typeService": "Sewage",
-            "UserId": 'DVXCCa8EMgei9Q5lVM2XtzQg3ok2'
+            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
-            "nameService": "Pintura de interiores",
+            "nameService": "Painting Services",
             "location": {
               "pais": "Colombia",
               "ciudad": "Cali"
             },
             "imageUrl": ["https://cdn.homedepot.com.mx/contentMarketing/Tips_Compra/241_Pintura/TC_D241_12/images/pintar-sala.jpg"],
-            "description": "Servicio de pintura de interiores",
+            "description": "Painting Services",
             "pricePerHour": 40,
             "typeService": "Paint",
-            "UserId": 'DVXCCa8EMgei9Q5lVM2XtzQg3ok2'
+            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
-            "nameService": "Diseño estructural",
+            "nameService": "Structural Designs",
             "location": {
               "pais": "Colombia",
               "ciudad": "Barranquilla"
             },
             "imageUrl": ["https://concadi.com/wp-content/uploads/2021/02/edificiobim-850x550.jpg"],
-            "description": "Diseño estructural de edificaciones",
+            "description": "Structural Designs",
             "pricePerHour": 80,
             "typeService": "Engineering",
-            "UserId": 'DVXCCa8EMgei9Q5lVM2XtzQg3ok2'
+            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           },
           {
-            "nameService": "Diseño arquitectónico",
+            "nameService": "Electrical Designs",
             "location": {
               "pais": "Colombia",
               "ciudad": "Cartagena"
             },
             "imageUrl": ["https://www.arquitecturapura.com/wp-content/uploads/2018/05/El-dise%C3%B1o-arquitect%C3%B3nico.jpg"],
-            "description": "Servicio de diseño arquitectónico",
+            "description": "Electrical Designs",
             "pricePerHour": 70,
-            "typeService": "Arquitecture",
-            "UserId": 'DVXCCa8EMgei9Q5lVM2XtzQg3ok2'
+            "typeService": "Electrical",
+            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
           }
   ];
 
