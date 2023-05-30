@@ -10,14 +10,15 @@ const getServiceByName = async (name) => {
                 [Op.iLike]: `%${name}%`
             }
         },
-        include: [{
-            model: User,
-            attributes: ['name', 'email'],
-            through: {
-                attributes: [],
-            }
-        }]
+        // include: [{
+        //     model: User,
+        //     attributes: ['name', 'email'],
+        //     through: {
+        //         attributes: [],
+        //     }
+        // }]
     });
+
     const servicesByName = dbServicesByName.map(service => {
         return {
             id: service.id,
