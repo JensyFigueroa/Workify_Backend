@@ -5,7 +5,6 @@ const { createService } = require('./createService.js');
 const getServices = async () => {
   const servicesForTesting = [
     {
-<<<<<<< HEAD
       "nameService": "Hair Cut",
       "location": {
         "pais": "Colombia",
@@ -78,81 +77,6 @@ const getServices = async () => {
       "UserId": "PjZfCEFPvuW23hCPI0OI31eMDkr1"
     }
   ]
-=======
-            "nameService": "Hair Cut",
-            "location": {
-              "pais": "Colombia",
-              "ciudad": "Armenia"
-            },
-            "imageUrl": ["https://img.freepik.com/vector-premium/patron-fisuras-corte-pelo-afeitado-barbershop-barber-hombre_82574-12065.jpg"],
-            "description": "Corte de pelo para perros y gatos",
-            "pricePerHour": 10,
-            "typeService": "Personal Care",
-            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
-          },
-          {
-            "nameService": "Kitchen Make Over.",
-            "location": {
-              "pais": "Colombia",
-              "ciudad": "Bogotá"
-            },
-            "imageUrl": ["https://duomostore.cl/wp-content/uploads/2022/09/remodelacion-cocinas-pequenas.jpg"],
-            "description": "Kitchen Make Over",
-            "pricePerHour": 50,
-            "typeService": "Construction",
-            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
-          },
-          {
-            "nameService": "Seweage Repairs",
-            "location": {
-              "pais": "Colombia",
-              "ciudad": "Medellín"
-            },
-            "imageUrl": ["https://ferreteriavidri.com/public/blog/media/files/Reparaciontubo-01.png"],
-            "description": "Seweage Repairs",
-            "pricePerHour": 30,
-            "typeService": "Sewage",
-            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
-          },
-          {
-            "nameService": "Painting Services",
-            "location": {
-              "pais": "Colombia",
-              "ciudad": "Cali"
-            },
-            "imageUrl": ["https://cdn.homedepot.com.mx/contentMarketing/Tips_Compra/241_Pintura/TC_D241_12/images/pintar-sala.jpg"],
-            "description": "Painting Services",
-            "pricePerHour": 40,
-            "typeService": "Paint",
-            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
-          },
-          {
-            "nameService": "Structural Designs",
-            "location": {
-              "pais": "Colombia",
-              "ciudad": "Barranquilla"
-            },
-            "imageUrl": ["https://concadi.com/wp-content/uploads/2021/02/edificiobim-850x550.jpg"],
-            "description": "Structural Designs",
-            "pricePerHour": 80,
-            "typeService": "Engineering",
-            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
-          },
-          {
-            "nameService": "Electrical Designs",
-            "location": {
-              "pais": "Colombia",
-              "ciudad": "Cartagena"
-            },
-            "imageUrl": ["https://www.arquitecturapura.com/wp-content/uploads/2018/05/El-dise%C3%B1o-arquitect%C3%B3nico.jpg"],
-            "description": "Electrical Designs",
-            "pricePerHour": 70,
-            "typeService": "Electrical",
-            "UserId": "7rcbhZc7hvRk42ZbFGC5txDynVG3"
-          }
-  ];
->>>>>>> a04e2b43f2b5cb6665f60c57abbfc81dec2dd858
-
   const dbFull = await Service.findAll();
   // console.log(dbFull, "dbFull");
 
