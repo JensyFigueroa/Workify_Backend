@@ -18,15 +18,13 @@ module.exports = (sequilize) => {
         },
         country: {
             type: DataTypes.STRING,
-           
         },
         city: {
             type: DataTypes.STRING,
-            
         },
         phone: {
             type: DataTypes.STRING,
-            
+
         },
         credential: {
             type: DataTypes.ARRAY(DataTypes.STRING)
@@ -39,11 +37,9 @@ module.exports = (sequilize) => {
         },
         adminStatus: {
             type: DataTypes.BOOLEAN,
-            
         },
         description: {
             type: DataTypes.STRING,
-            
         },
         portfolio: {
             type: DataTypes.STRING,
