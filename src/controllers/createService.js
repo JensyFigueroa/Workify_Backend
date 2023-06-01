@@ -2,7 +2,7 @@ const { Service, User } = require('../db.js');
 
 const createService = async (body) => {
   const { nameService, location, imageUrl, description, pricePerHour, typeService, UserId } = body;
-
+  console.log(UserId);
   const user = await User.findByPk(UserId);
   if (!user) {
     throw new Error('User not found for userId: ' + UserId);

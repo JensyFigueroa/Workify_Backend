@@ -38,7 +38,7 @@ module.exports = (sequilize) => {
             allowNull: false,
         },
         reviews: {
-            type: DataTypes.JSONB
+            type: DataTypes.ARRAY(DataTypes.JSONB)
         }
     })
 };
