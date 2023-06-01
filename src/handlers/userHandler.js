@@ -1,17 +1,17 @@
-// const { Service, User } = require('../db.js');
-// const { registerUser } = require('../controllers/registerUser.js')
+const { Service, User } = require('../db.js');
+const { getUserById } = require('../controllers/getUserById.js')
 
-// const registerNewUser = async (req, res) => {
-//     const dataUser = req.body;
+const getUserDetailById = async (req, res) => {
+    const {idUser} = req.params;
+console.log(idUser,'iduser');
+    try {
 
-//     try {
+        const userDetail = await getUserById(idUser)
 
-//         const newUserMessage = await registerUser(dataUser)
+        res.status(200).json(userDetail);
 
-//         res.status(200).json(newUserMessage);
-
-//     } catch (error) {
-//         return res.status(404).json({error});
-//     }
-// };
-// module.exports = { registerNewUser, };
+    } catch (error) {
+        return res.status(404).json({error: error.message});
+    }
+};
+module.exports = { getUserDetailById };
