@@ -9,7 +9,7 @@ const router = Router();
 
 console.log('Estoy en el index de routes');
 
-// router.use('/user', userRouter);
+router.use('/user', userRouter);
 
 router.use('/service', serviceRouter);
 
