@@ -14,7 +14,7 @@ const getServices = async () => {
       "description": "Corte de pelo para perros y gatos",
       "pricePerHour": 10,
       "typeService": "Personal Care",
-      "UserId": "PjZfCEFPvuW23hCPI0OI31eMDkr1"
+      "UserId": "KGJpJkC7s7WA2vKZkhaIdrFdrQS2"
     },
     {
       "nameService": "Kitchen Make Over.",
@@ -26,7 +26,7 @@ const getServices = async () => {
       "description": "Kitchen Make Over",
       "pricePerHour": 50,
       "typeService": "Construction",
-      "UserId": "PjZfCEFPvuW23hCPI0OI31eMDkr1"
+      "UserId": "KGJpJkC7s7WA2vKZkhaIdrFdrQS2"
     },
     {
       "nameService": "Seweage Repairs",
@@ -38,7 +38,7 @@ const getServices = async () => {
       "description": "Seweage Repairs",
       "pricePerHour": 30,
       "typeService": "Sewage",
-      "UserId": "PjZfCEFPvuW23hCPI0OI31eMDkr1"
+      "UserId": "KGJpJkC7s7WA2vKZkhaIdrFdrQS2"
     },
     {
       "nameService": "Painting Services",
@@ -50,7 +50,7 @@ const getServices = async () => {
       "description": "Painting Services",
       "pricePerHour": 40,
       "typeService": "Paint",
-      "UserId": "PjZfCEFPvuW23hCPI0OI31eMDkr1"
+      "UserId": "KGJpJkC7s7WA2vKZkhaIdrFdrQS2"
     },
     {
       "nameService": "Structural Designs",
@@ -62,7 +62,7 @@ const getServices = async () => {
       "description": "Structural Designs",
       "pricePerHour": 80,
       "typeService": "Engineering",
-      "UserId": "PjZfCEFPvuW23hCPI0OI31eMDkr1"
+      "UserId": "KGJpJkC7s7WA2vKZkhaIdrFdrQS2"
     },
     {
       "nameService": "Electrical Designs",
@@ -74,7 +74,7 @@ const getServices = async () => {
       "description": "Electrical Designs",
       "pricePerHour": 70,
       "typeService": "Electrical",
-      "UserId": "PjZfCEFPvuW23hCPI0OI31eMDkr1"
+      "UserId": "KGJpJkC7s7WA2vKZkhaIdrFdrQS2"
     }
   ]
   const dbFull = await Service.findAll();
