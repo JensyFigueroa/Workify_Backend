@@ -39,6 +39,10 @@ module.exports = (sequilize) => {
         },
         reviews: {
             type: DataTypes.ARRAY(DataTypes.JSONB)
+        },
+        enabled: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: true,
         }
     })
 };

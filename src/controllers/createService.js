@@ -1,7 +1,7 @@
 const { Service, User } = require('../db.js');
 
 const createService = async (body) => {
-  const { nameService, location, imageUrl, description, pricePerHour, typeService, UserId } = body;
+  const { nameService, location, imageUrl, description, pricePerHour, typeService, UserId, reviews } = body;
   console.log(UserId);
   const user = await User.findByPk(UserId);
   if (!user) {
@@ -15,9 +15,11 @@ const createService = async (body) => {
     description: description,
     pricePerHour: pricePerHour,
     typeService: typeService,
+    reviews: reviews,
     UserId: UserId,
   });
 
+  // console.log('servicio', newService);
   const message = 'The service ' + nameService + ' was created.';
   return message;
 };

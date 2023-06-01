@@ -251,7 +251,6 @@ const getServices = async () => {
   }
 
   const dbServices = await Service.findAll();
-
   const services = dbServices.map(service => {
     return {
       id: service.id,
@@ -260,10 +259,13 @@ const getServices = async () => {
       imageUrl: service.imageUrl,
       pricePerHour: service.pricePerHour,
       typeService: service.typeService,
+      reviews: service.reviews,
       UserId: service.UserId,
+      enabled: service.enabled
     };
   });
 
+  console.log('servicios', services);
   return services;
 };
 
