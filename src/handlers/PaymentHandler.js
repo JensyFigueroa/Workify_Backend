@@ -19,7 +19,7 @@ const newCheckOut = async (req, res)=>{
         console.log(validatet);
         res.status(200).json(validatet)
     } catch (error) {
-        console.log(error.message);
+        //console.log(error.message);
         res.json(error.message)
     }
 }
