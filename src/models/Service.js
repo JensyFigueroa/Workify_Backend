@@ -43,6 +43,9 @@ module.exports = (sequilize) => {
         enabled: {
             type: DataTypes.BOOLEAN,
             defaultValue: true,
+        },
+        nameUser: {
+            type: DataTypes.STRING,
         }
     })
 };
