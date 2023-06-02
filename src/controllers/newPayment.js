@@ -64,11 +64,9 @@ const newPayment = async ( cartsItems) =>{
         line_items:itemList,
         metadata:metadata,
         mode: 'payment',
-        success_url: 'http://localhost:3001/payment/success',
-        cancel_url: 'http://localhost:3001/payment/cancel'
+        success_url: 'http://127.0.0.1:5173/payment/success',
+        cancel_url: 'http://127.0.0.1:5173/cart'
     })
-
-    console.log('Aqui deberia estar la data: ',emailData);
 
     return session;
 
