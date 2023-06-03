@@ -250,8 +250,14 @@ const getServices = async () => {
     }
   }
 
-  const dbServices = await Service.findAll();
-  const services = dbServices.map(service => {
+  const dbServices = await Service.findAll({
+    include: [User] 
+  });
+  console.log(dbServices[0].User.name, "servcios crudos del back")
+  const services =  dbServices.map((service) => {
+
+    console.log(service.User.email)
+
     return {
       id: service.id,
       nameService: service.nameService,
@@ -261,11 +267,13 @@ const getServices = async () => {
       typeService: service.typeService,
       reviews: service.reviews,
       UserId: service.UserId,
-      enabled: service.enabled
+      enabled: service.enabled,
+      nameUserService: service.User.name,
+      emailUserService: service.User.email
     };
   });
 
-  console.log('servicios', services);
+  //console.log('servicios', services);
   return services;
 };
 
