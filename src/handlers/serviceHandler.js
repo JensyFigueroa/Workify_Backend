@@ -3,6 +3,7 @@ const { filterServiceId } = require('../controllers/getServicesById.js')
 const { getServices } = require('../controllers/getServices.js')
 const{ createService } =require('../controllers/createService.js')
 const { getServiceByName } = require('../controllers/getServiceByName.js')
+const { postReview } = require('../controllers/createReview.js')
 
 
 const getServicesDB = async (req, res) => {
@@ -67,5 +68,20 @@ const postService = async (req, res) => {
     }
 };
 
-module.exports = { getServiceDetailById, getServicesDB, postService, getServicesByName };
+const postNewReview = async (req, res) => {
+    const dataService = req.body;
+
+    try {
+
+        const newReview = await postReview(dataService)
+
+        res.status(200).json(newReview);
+
+    } catch (error) {
+        console.log(error);
+        return res.status(404).json({error});
+    }
+};
+
+module.exports = { getServiceDetailById, getServicesDB, postService, getServicesByName, postNewReview };
 
