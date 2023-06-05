@@ -3,6 +3,7 @@ const userRouter = require('./userRouter');
 const serviceRouter = require('./serviceRouter');
 const paymentCheckOut = require('./paymentCheckOut')
 const loginUserRouter = require('./loginUserRouter')
+const profileUser = require('./porfileUserRouter')
 
 
 const router = Router();
@@ -14,6 +15,9 @@ router.use('/user', userRouter);
 router.use('/service', serviceRouter);
 
 router.use('/payment', paymentCheckOut);
+
 router.use('/login', loginUserRouter);
+
+router.use('/profile', profileUser);
 
 module.exports = router;
