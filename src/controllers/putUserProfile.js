@@ -1,6 +1,6 @@
 const { Service, User } = require('../db.js');
 
-const postUserProfile = async (idPro, name, email, country, city, phone, imagePublicId, imageUrl, description, buys) => {
+const newUserProfile = async (idPro, name, email, country, city, phone, imagePublicId, imageUrl, description, buys) => {
     const idUserPro = await User.findByPk(idPro);
 
     if (!idUserPro) {
@@ -31,4 +31,4 @@ const postUserProfile = async (idPro, name, email, country, city, phone, imagePu
 
 
 
-module.exports = { postUserProfile }
+module.exports = { newUserProfile }

@@ -1,14 +1,14 @@
 const { Service, User } = require('../db.js');
-const { postUserProfile } = require('../controllers/getProfileUser.js')
+const { newUserProfile } = require('../controllers/putUserProfile.js')
 
-const getUserProfile = async (req, res) => {
+const putUserProfile = async (req, res) => {
     const { idPro } = req.params;
     const { name, email, country, city, phone, imagePublicId, imageUrl, description, buys } = req.body
 
     console.log('idhandler', idPro);
     try {
 
-        const profileUser = await postUserProfile(idPro, name, email, country, city, phone, imagePublicId, imageUrl, description, buys);
+        const profileUser = await newUserProfile(idPro, name, email, country, city, phone, imagePublicId, imageUrl, description, buys);
 
 
         res.status(200).json(profileUser)
@@ -17,4 +17,4 @@ const getUserProfile = async (req, res) => {
         return res.status(404).json({ error: error.message });
     }
 };
-module.exports = { getUserProfile };
+module.exports = { putUserProfile };
