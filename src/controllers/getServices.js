@@ -16,7 +16,9 @@ const getServices = async () => {
       "typeService": "Personal Care",
       "reviews": [
         {
-          "raiting": 5,
+          "name": "William Neiva",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": 5,
           "comment": "I am so glad I came here. Pablo, provided the best possible experience. I’m used to Barbers, but this was for superior if you’re looking for a barber in Armenia be sure to check out these guys and make sure you hit up Pablo.",
         }
       ],
@@ -34,7 +36,9 @@ const getServices = async () => {
       "typeService": "Construction",
       "reviews": [
         {
-          "raiting": 3,
+          "name": "Juan Pablo Merida",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": 3,
           "comment": "All Fantastic. The Draft was fast and expeditious. The work flowed smoothly, the architects took care of everything, they met the deadlines and the budget",
         }
       ],
@@ -52,7 +56,9 @@ const getServices = async () => {
       "typeService": "Sewage",
       "reviews": [
         {
-          "raiting": "5",
+          "name": "Pedro Lopez",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": "5",
           "comment": "Excellent service, they did the maintenance quickly and professionally!",
         }
       ],
@@ -70,8 +76,16 @@ const getServices = async () => {
       "typeService": "Paint",
       "reviews": [
         {
-          "raiting": 4,
+          "name": "Camilo Suaza",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": 4,
           "comment": "As always, very good attention and cordiality.",
+        },
+        {
+          "name": "Pedro Lopez",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": "5",
+          "comment": "Excellent service, they did the maintenance quickly and professionally!",
         }
       ],
       "UserId": "PjZfCEFPvuW23hCPI0OI31eMDkr1"
@@ -88,7 +102,9 @@ const getServices = async () => {
       "typeService": "Engineering",
       "reviews": [
         {
-          "raiting": 5,
+          "name": "Maria Adelaida Gonzalez",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": 5,
           "comment": "Very friendly, listen and understand the needs of customers",
         }
       ],
@@ -106,7 +122,9 @@ const getServices = async () => {
       "typeService": "Electrical",
       "reviews": [
         {
-          "raiting": 4,
+          "name": "John Smith",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": 4,
           "comment": "Excellent service and quality.",
         }
       ],
@@ -124,7 +142,9 @@ const getServices = async () => {
       "typeService": "Dog Groomer",
       "reviews": [
         {
-          "raiting": 3,
+          "name": "Pedro Capone",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": 3,
           "comment": "They are the best, they leave my little moon very beautiful and they are super affectionate, they are my baby",
         }
       ],
@@ -142,7 +162,9 @@ const getServices = async () => {
       "typeService": "Hair Salon",
       "reviews": [
         {
-          "raiting": 5,
+          "name": "John Wick",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": 5,
           "comment": "Very expeditious, they gave me an appointment for the same day and they attended me on schedule. They gave me a good cut, listening to what I asked for. Not 1 cm more! Good treatment, good work and very good price!",
         }
       ],
@@ -160,7 +182,9 @@ const getServices = async () => {
       "typeService": "Gardener",
       "reviews": [
         {
-          "raiting": 4,
+          "name": "Sam Smith",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": 4,
           "comment": "Everything was beautiful, they changed the face of those spaces.",
         }
       ],
@@ -178,7 +202,9 @@ const getServices = async () => {
       "typeService": "Air Conditioning Repair",
       "reviews": [
         {
-          "raiting": 3,
+          "name": "Pedro Lopez",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": 3,
           "comment": "Very good service and advice, good prices and extensive payment options.",
         }
       ],
@@ -196,7 +222,9 @@ const getServices = async () => {
       "typeService": "Mechanic",
       "reviews": [
         {
-          "raiting": 4,
+          "name": "Juan Lopez",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": 4,
           "comment": "Super recommended and cheap",
         }
       ],
@@ -214,7 +242,9 @@ const getServices = async () => {
       "typeService": "Motorcycle Mechanic",
       "reviews": [
         {
-          "raiting": 5,
+          "name": "Chris Smith",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": 5,
           "comment": "Grateful to find a competent and honest mechanic",
         }
       ],
@@ -232,9 +262,13 @@ const getServices = async () => {
       "typeService": "Interior Decoration",
       "reviews": [
         {
-          "raiting": 4,
+          "name": "Daniel Ocampo",
+          "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
+          "rating": 4,
           "comment": "Excellent treatment and dedication from the first moment to the last!",
+
         }
+        
       ],
       "UserId": "PjZfCEFPvuW23hCPI0OI31eMDkr1"
     },

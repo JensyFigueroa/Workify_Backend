@@ -9,7 +9,7 @@ const stripe = new Stripe(KEY_STRIPE);
 
 const newPayment = async ( cartsItems) =>{
 
- // console.log(cartsItems);
+ console.log('cartsItems: ',cartsItems);
 
     const itemList = await cartsItems.map(item=>{
         const newItem = {
@@ -41,11 +41,13 @@ const newPayment = async ( cartsItems) =>{
         // console.log('Pase el getUser');
    
          let emailDataObjetc = {
-           nameService : findedService.nameService,
-           emailService: getUser.email
+          idService:elementCart.id,
+          nameService : findedService.nameService,
+          emailService: getUser.email,
+          quantity: elementCart.quantity
          }
    
-        // console.log('este es el objeto de correos: ',emailDataObjetc);
+        //console.log('este es el objeto de correos: ',emailDataObjetc);
    
          emailData=[... emailData, emailDataObjetc];
    
@@ -53,9 +55,11 @@ const newPayment = async ( cartsItems) =>{
    
        }))
 
-       const metadata = emailData.reduce((result, { nameService, emailService }, index) => {
+       const metadata = emailData.reduce((result, { nameService, emailService , idService, quantity}, index) => {
         result[`nameService_${index}`] = nameService;
         result[`emailService_${index}`] = emailService;
+        result[`idService_${index}`] = idService;
+        result[`hours_${index}`]=quantity;
         return result;
       }, {});
 
@@ -64,7 +68,7 @@ const newPayment = async ( cartsItems) =>{
         line_items:itemList,
         metadata:metadata,
         mode: 'payment',
-        success_url: 'http://127.0.0.1:5173/payment/success',
+        success_url: 'http://127.0.0.1:5173/payment/success?session_id={CHECKOUT_SESSION_ID}',
         cancel_url: 'http://127.0.0.1:5173/cart'
     })
 
