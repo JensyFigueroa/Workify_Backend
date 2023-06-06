@@ -46,6 +46,18 @@ module.exports = (sequilize) => {
         },
         buys: {
             type: DataTypes.ARRAY(DataTypes.JSONB)
+        },
+        paypalEmail: {
+            type: DataTypes.STRING,
+        },
+        cart: {
+            type: DataTypes.ARRAY(DataTypes.JSONB)
+        },
+        enabled: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: true,
         }
+
+
     })
 };
