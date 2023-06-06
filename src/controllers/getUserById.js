@@ -19,7 +19,7 @@ const getUserById = async (id) => {
         throw new Error('User not found')
     }
     
-    const {  name, email, country, city, phone, adminStatus, description, buys, Services } = userfiltered;
+    const {  name, email, country, city, phone, adminStatus, description, buys, Services, imageUrl } = userfiltered;
 
       const userDetail =  { 
         id,
@@ -31,6 +31,7 @@ const getUserById = async (id) => {
         adminStatus,
         description,
         buys,
+        imageUrl,
         Services
       }
 
