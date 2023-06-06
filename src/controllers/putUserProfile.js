@@ -4,7 +4,7 @@ const newUserProfile = async (idPro, name, email, country, city, phone, imagePub
     const idUserPro = await User.findByPk(idPro);
 
     if (!idUserPro) {
-        throw new Error('Este usuario no existe');
+        throw new Error('Username does not exist');
     }
 
     const [rowsUpdated, [updatedUser]] = await User.update(

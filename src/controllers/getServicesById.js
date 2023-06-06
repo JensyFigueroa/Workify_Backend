@@ -9,8 +9,8 @@ const filterServiceId = async (id) => {
     const idString = id.toString();
 
     const servicefiltered = await Service.findByPk(idString, {
-           include: [User],
-         });
+        include: [User],
+        });
 
     if (!servicefiltered){
         throw new Error('Service not found')
