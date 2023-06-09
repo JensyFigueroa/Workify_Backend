@@ -3,7 +3,7 @@ const server = require("./src/app");
 
 conn.sync({ force: true }).then(async () => {
   console.log("connect to DB");
-  server.listen(3001, () => {
-    console.log("listening at 3001"); // eslint-disable-line no-console
+  server.listen(process.env.PORT, () => {
+    console.log('%s listening at', process.env.PORT); // eslint-disable-line no-console
   });
 });
