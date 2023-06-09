@@ -1,13 +1,10 @@
 const { Router } = require('express');
 const userRouter = require('./userRouter');
 const serviceRouter = require('./serviceRouter');
-const paymentCheckOut = require('./paymentCheckOut')
 const loginUserRouter = require('./loginUserRouter')
 const profileUserRouter = require('./porfileUserRouter')
 const profileServiceRouter = require('./profileServiceRouter')
 const paymentCheckOut = require('./paymentCheckOut');
-const loginUserRouter = require('./loginUserRouter');
-const profileUserRouter = require('./porfileUserRouter');
 const locationRouter = require('./locationRouter');
 
 
