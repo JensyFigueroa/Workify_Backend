@@ -12,7 +12,7 @@ const getCity = async (countryCode) => {
         },
       });
 
-      console.log(response.data, "respuesta");
+      //console.log(response.data, "respuesta");
       const citys = response.data.geonames.map(city => {
         return {name: city.name}
       })

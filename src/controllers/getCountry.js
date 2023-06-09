@@ -9,7 +9,7 @@ const getCountry = async () => {
         }
       });
 
-      console.log(response.data, "respuesta");
+      //console.log(response.data, "respuesta");
 
   const countrys = response.data.geonames.map(country => {
    return ( {
