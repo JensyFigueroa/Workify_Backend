@@ -5,6 +5,10 @@ const paymentCheckOut = require('./paymentCheckOut')
 const loginUserRouter = require('./loginUserRouter')
 const profileUserRouter = require('./porfileUserRouter')
 const profileServiceRouter = require('./profileServiceRouter')
+const paymentCheckOut = require('./paymentCheckOut');
+const loginUserRouter = require('./loginUserRouter');
+const profileUserRouter = require('./porfileUserRouter');
+const locationRouter = require('./locationRouter');
 
 
 const router = Router();
@@ -22,5 +26,8 @@ router.use('/login', loginUserRouter);
 router.use('/profile', profileUserRouter);
 
 router.use('/profileService', profileServiceRouter)
+
+router.use('/location', locationRouter)
+
 
 module.exports = router;
