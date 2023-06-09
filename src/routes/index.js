@@ -4,6 +4,7 @@ const serviceRouter = require('./serviceRouter');
 const paymentCheckOut = require('./paymentCheckOut')
 const loginUserRouter = require('./loginUserRouter')
 const profileUserRouter = require('./porfileUserRouter')
+const profileServiceRouter = require('./profileServiceRouter')
 
 
 const router = Router();
@@ -19,5 +20,7 @@ router.use('/payment', paymentCheckOut);
 router.use('/login', loginUserRouter);
 
 router.use('/profile', profileUserRouter);
+
+router.use('/profileService', profileServiceRouter)
 
 module.exports = router;

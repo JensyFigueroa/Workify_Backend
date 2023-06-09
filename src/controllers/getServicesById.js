@@ -10,24 +10,25 @@ const filterServiceId = async (id) => {
 
     const servicefiltered = await Service.findByPk(idString, {
         include: [User],
-        });
+    });
 
-    if (!servicefiltered){
+    if (!servicefiltered) {
         throw new Error('Service not found')
     }
-    
-    const { imageUrl, nameService, typeService, description, location, reviews, pricePerHour, UserId } = servicefiltered;
 
-        const serviceDetail = {
-            imageUrl,
-            nameService,
-            typeService,
-            description,
-            location,
-            reviews,
-            pricePerHour,
-            UserId
-        };
+    const { imageUrl, nameService, typeService, description, location, reviews, pricePerHour, UserId, enabledS } = servicefiltered;
+
+    const serviceDetail = {
+        imageUrl,
+        nameService,
+        typeService,
+        description,
+        location,
+        reviews,
+        pricePerHour,
+        UserId,
+        enabledS
+    };
 
     return serviceDetail;
 };

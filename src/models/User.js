@@ -24,7 +24,6 @@ module.exports = (sequilize) => {
         },
         phone: {
             type: DataTypes.STRING,
-
         },
         credential: {
             type: DataTypes.ARRAY(DataTypes.STRING)
@@ -57,7 +56,5 @@ module.exports = (sequilize) => {
             type: DataTypes.BOOLEAN,
             defaultValue: true,
         }
-
-
     })
 };

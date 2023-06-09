@@ -27,8 +27,9 @@ const getServiceByName = async (name) => {
             imageUrl: service.imageUrl,
             pricePerHour: service.pricePerHour,
             typeService: service.typeService,
+            enbaledS: service.enabledS
         }
-    
+
     })
 
     //console.log(services, "que tengo en la base de datos filtrados")
