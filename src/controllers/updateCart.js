@@ -16,7 +16,9 @@ const updateCart = async (userId, cart) => {
             return !existingCart.some(existingItem => existingItem.id === item.id);
         });
         if (filteredCart.length === 0) {
+            console.log('No new items to add to the cart');
             return 'No new items to add to the cart';
+
         }
         const updatedCart = [...existingCart, ...filteredCart];
 
