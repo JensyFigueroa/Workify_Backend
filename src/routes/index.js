@@ -1,9 +1,10 @@
 const { Router } = require('express');
 const userRouter = require('./userRouter');
 const serviceRouter = require('./serviceRouter');
-const paymentCheckOut = require('./paymentCheckOut')
-const loginUserRouter = require('./loginUserRouter')
-const profileUserRouter = require('./porfileUserRouter')
+const paymentCheckOut = require('./paymentCheckOut');
+const loginUserRouter = require('./loginUserRouter');
+const profileUserRouter = require('./porfileUserRouter');
+const locationRouter = require('./locationRouter');
 
 
 const router = Router();
@@ -19,5 +20,7 @@ router.use('/payment', paymentCheckOut);
 router.use('/login', loginUserRouter);
 
 router.use('/profile', profileUserRouter);
+
+router.use('/location', locationRouter)
 
 module.exports = router;
