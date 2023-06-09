@@ -1,36 +1,84 @@
 
+// // const { Service, User } = require('../db.js');
 
-app.get('/countryInfoJSON', async (req, res) => {
-  try {
-    const response = await axios.get(`${geonamesProxyUrl}/countryInfoJSON`, {
-      params: {
-        username: 'joaquinsgro',
-        type: 'json'
-      }
-    });
-    res.json(response.data);
-  } catch (error) {
-    console.error('Error al obtener la lista de países', error);
-    res.status(500).json({ error: 'Error al obtener la lista de países' });
-  }
-});
+// // const updateCart = async (userId, cart) => {
+// //     // console.log(userId, "usuario a put");
+// //     // console.log(cart, "cart a put");
+// //     try {
+// //         const userToUpdate = await User.findByPk(userId);
 
-app.get('/searchJSON', async (req, res) => {
-  const { q } = req.query;
+// //         if (!userToUpdate) {
+// //             throw new Error('Este usuario no existe');
+// //         }
 
-  try {
-    const response = await axios.get(`${geonamesProxyUrl}/searchJSON`, {
-      params: {
-        q,
-        username: 'joaquinsgro',
-        type: 'json',
-      },
-    });
+// //         const existingCart = userToUpdate.cart || [];
+// //          //console.log(existingCart, "cart existente"); 
+// //          const filteredCart = cart.filter(item => {
+// //             return !existingCart.some(existingItem => existingItem.id === item.id);
+// //         });
+// //         if (filteredCart.length === 0) {
+// //             console.log('No new items to add to the cart');
+// //             return 'No new items to add to the cart';
 
-    res.json(response.data);
-  } catch (error) {
-    console.error('Error al obtener la lista de estados', error);
-    res.status(500).json({ error: 'Error al obtener la lista de estados' });
-  }
-});
+// //         }
+// //         const updatedCart = [...existingCart, ...filteredCart];
+// //         console.log(updatedCart, "fuck");
 
+// //         await userToUpdate.update({ cart: updatedCart });
+
+// //         return 'Cart updated successfully';
+// //     } catch (error) {
+// //         console.error(error);
+// //         throw new Error('Failed to add to cart');
+// //     }
+
+// // };
+
+// // module.exports = { updateCart }
+
+
+
+// const { Service, User } = require('../db.js');
+
+// const updateCart = async (userId, cart) => {
+//     try {
+//         let userToUpdate = await User.findByPk(userId);
+        
+//     console.log(userToUpdate.cart, "gonorrea hpta");
+//     if (!userToUpdate) {
+//       throw new Error('This user does not exist');
+//     }
+
+//     let existingCart = userToUpdate.cart || [];
+    
+
+//     if (cart.length === 0) {
+//       return 'No new items to add to the cart';
+//     }
+
+//     cart.forEach(item => {
+//         //console.log(existingCart, "existing cart")
+//         //console.log(item, "item del carrtio");
+//       let existingItemIndex = existingCart.findIndex(existingItem => existingItem.id === item.id);
+//       //console.log(existingItemIndex);
+//       if (existingItemIndex !== -1) {
+//         let existingQuantity = Number(existingCart[existingItemIndex].quantity);
+//         let itemQuantity = Number(item.quantity);
+//         existingCart[existingItemIndex].quantity = existingQuantity + itemQuantity; // Update quantity if item already exists
+//       } else {
+//         //console.log("holi");
+//         existingCart.push(item); // Add new item to the cart
+//       }
+//     });
+//     console.log(existingCart);
+  
+//     await userToUpdate.update({ cart: existingCart });
+//     return userToUpdate.cart
+//     return 'Cart updated successfully';
+//   } catch (error) {
+//     console.error(error);
+//     throw new Error('Failed to add to cart');
+//   }
+// };
+
+//  module.exports = { updateCart };
