@@ -26,9 +26,10 @@ const newCheckOut = async (req, res)=>{
 }
 
 const successfulPayment = async (req,res)=>{
-    const { idSession }=req.query
+    const { idSession, idUser }=req.query
+    console.log(idUser,' este es el id user');
     try {
-        const getEmails = await getEmailByidSession(idSession);
+        const getEmails = await getEmailByidSession(idSession, idUser);
         console.log('getEmails',getEmails);
         res.status(200).json(getEmails)
     } catch (error) {
