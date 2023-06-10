@@ -3,10 +3,11 @@ const { getUserById } = require('../controllers/getUserById.js')
 const { updateCart } = require('../controllers/updateCart.js')
 const { getUserCartById } = require('../controllers/getUserCartById.js')
 const { vacateCart } = require('../controllers/vacateCart.js')
+const { allUsersDb } = require('../controllers/allUsersDb.js')
 
 const getUserDetailById = async (req, res) => {
-    const {idUser} = req.params;
-//console.log(idUser,'iduser');
+    const { idUser } = req.params;
+    //console.log(idUser,'iduser');
     try {
 
         const userDetail = await getUserById(idUser)
@@ -14,14 +15,14 @@ const getUserDetailById = async (req, res) => {
         res.status(200).json(userDetail);
 
     } catch (error) {
-        return res.status(404).json({error: error.message});
+        return res.status(404).json({ error: error.message });
     }
 };
 
 
 const getCartById = async (req, res) => {
-    const  userId  = req.params.idUser
-console.log( userId,"getcart id");
+    const userId = req.params.idUser
+    console.log(userId, "getcart id");
     try {
 
         const userCart = await getUserCartById(userId)
@@ -29,20 +30,20 @@ console.log( userId,"getcart id");
         res.status(200).json(userCart);
 
     } catch (error) {
-        return res.status(404).json({error: error.message});
+        return res.status(404).json({ error: error.message });
     }
 };
 
 
 
 const updateUserCart = async (req, res) => {
-    const  userId  = req.params.idUser
+    const userId = req.params.idUser
     const cart = req.body
 
-  
+
     try {
 
-        const messageSuccess = await updateCart(userId  , cart);
+        const messageSuccess = await updateCart(userId, cart);
 
 
         res.status(200).json(messageSuccess)
@@ -54,8 +55,8 @@ const updateUserCart = async (req, res) => {
 
 const vacateUserCart = async (req, res) => {
     const { idUser } = req.params;
-    
-    
+
+
     try {
 
         const messageSuccess = await vacateCart(idUser);
@@ -68,7 +69,16 @@ const vacateUserCart = async (req, res) => {
     }
 };
 
+const getUser = async (req, res) => {
+    try {
+        const allUsers = await allUsersDb()
+        res.status(200).json(allUsers)
+    } catch (error) {
+        res.status(404).json({ error: error.message })
+    }
+}
 
 
 
-module.exports = { getUserDetailById, updateUserCart, getCartById, vacateUserCart };
+
+module.exports = { getUserDetailById, updateUserCart, getCartById, vacateUserCart, getUser };
