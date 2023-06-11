@@ -36,7 +36,8 @@ const getEmailByidSession = async(sessionId, idUser) => {
             const contract = {
               pay: (service.hours*filaService.pricePerHour),
               contratistName: userName,
-              contracthours: service.hours
+              contracthours: service.hours,
+              idUser:idUser
             }
       
             if (filaService.contracts===null){
@@ -49,6 +50,8 @@ const getEmailByidSession = async(sessionId, idUser) => {
               pay: (filaService.pricePerHour*service.hours),
               nameService: service.nameService,
               contracthours: service.pricePerHour,
+              idService: service.idService,
+              typeService: filaService.typeService
             }
       
       
