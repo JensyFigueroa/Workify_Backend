@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { postNewReview, getServiceDetailById, getServicesDB, postService, getServicesByName, getContractsService } = require('../handlers/serviceHandler.js');
+const { postNewReview, getServiceDetailById, getServicesDB, postService, getServicesByName, getContractsService, putServiceEnabledS } = require('../handlers/serviceHandler.js');
 
 const service = Router();
 
@@ -11,6 +11,7 @@ service.get('/:idService', getServiceDetailById)
 service.post('/', postService)
 service.post('/review', postNewReview)
 service.get('/contracts/:idService', getContractsService)
+service.put('/enabledS/:idService', putServiceEnabledS)
 
 
 module.exports = service;

@@ -1,6 +1,6 @@
 const { Service, User } = require('../db.js');
 
-const newUserProfile = async (idPro, name, email, country, city, phone, imagePublicId, imageUrl, description, portfolio, buys, paypalEmail, cart, enabled) => {
+const newUserProfile = async (idPro, name, email, country, city, phone, imagePublicId, imageUrl, description, portfolio, buys, paypalEmail, cart) => {
     const idUserPro = await User.findByPk(idPro, { include: Service });
     // console.log('idUserPro', idUserPro);
 
@@ -22,12 +22,12 @@ const newUserProfile = async (idPro, name, email, country, city, phone, imagePub
             buys,
             paypalEmail,
             cart,
-            enabled,
+
         },
         {
             where: { id: idPro },
             returning: true,
-            attributes: ['id', 'name', 'email', 'country', 'city', 'phone', 'imagePublicId', 'imageUrl', 'description', 'portfolio', 'buys', 'paypalEmail', 'cart', 'enabled'],
+            attributes: ['id', 'name', 'email', 'country', 'city', 'phone', 'imagePublicId', 'imageUrl', 'description', 'portfolio', 'buys', 'paypalEmail', 'cart'],
         }
     )
     return updatedUser;

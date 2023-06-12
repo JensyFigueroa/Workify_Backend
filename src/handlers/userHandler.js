@@ -1,10 +1,10 @@
-const { Service, User } = require('../db.js');
 const { getUserById } = require('../controllers/getUserById.js')
 const { updateCart } = require('../controllers/updateCart.js')
 const { getUserCartById } = require('../controllers/getUserCartById.js')
 const { vacateCart } = require('../controllers/vacateCart.js')
 const { allUsersDb } = require('../controllers/allUsersDb.js')
 const { allUsersBuys } = require('../controllers/allUsersBuys.js')
+const { putEnabledUser } = require('../controllers/putEnabledUser.js')
 
 const getUserDetailById = async (req, res) => {
     const { idUser } = req.params;
@@ -87,8 +87,20 @@ const userPayment = async (req, res) => {
     } catch (error) {
         res.status(404).json({ error: error.message })
     }
+};
+
+const enabledUser = async (req, res) => {
+    const { idUser } = req.params;
+    const { enabled } = req.body
+
+    try {
+        const userEnabled = await putEnabledUser(idUser)
+        res.status(200).json(userEnabled)
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
 }
 
 
 
-module.exports = { getUserDetailById, updateUserCart, getCartById, vacateUserCart, getUser, userPayment };
+module.exports = { getUserDetailById, updateUserCart, getCartById, vacateUserCart, getUser, userPayment, enabledUser };

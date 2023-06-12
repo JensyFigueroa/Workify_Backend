@@ -5,6 +5,7 @@ const { createService } = require('../controllers/createService.js')
 const { getServiceByName } = require('../controllers/getServiceByName.js')
 const { postReview } = require('../controllers/createReview.js')
 const { contractsServices } = require('../controllers/allContractsService.js')
+const { serviceEnabledS } = require('../controllers/putEnabledService.js')
 
 
 const getServicesDB = async (req, res) => {
@@ -95,5 +96,18 @@ const getContractsService = async (req, res) => {
     }
 }
 
-module.exports = { getServiceDetailById, getServicesDB, postService, getServicesByName, postNewReview, getContractsService };
+const putServiceEnabledS = async (req, res) => {
+    const { idService } = req.params;
+    const { nameService } = req.body
+
+    try {
+        const enabledService = await serviceEnabledS(idService, nameService)
+        res.status(200).json(enabledService)
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+
+}
+
+module.exports = { getServiceDetailById, getServicesDB, postService, getServicesByName, postNewReview, getContractsService, putServiceEnabledS };
 
