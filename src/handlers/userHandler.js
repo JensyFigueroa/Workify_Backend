@@ -4,6 +4,7 @@ const { updateCart } = require('../controllers/updateCart.js')
 const { getUserCartById } = require('../controllers/getUserCartById.js')
 const { vacateCart } = require('../controllers/vacateCart.js')
 const { allUsersDb } = require('../controllers/allUsersDb.js')
+const { allUsersBuys } = require('../controllers/allUsersBuys.js')
 
 const getUserDetailById = async (req, res) => {
     const { idUser } = req.params;
@@ -78,7 +79,16 @@ const getUser = async (req, res) => {
     }
 }
 
+const userPayment = async (req, res) => {
+    const { idUser } = req.params
+    try {
+        const allBuys = await allUsersBuys(idUser)
+        res.status(200).json(allBuys)
+    } catch (error) {
+        res.status(404).json({ error: error.message })
+    }
+}
 
 
 
-module.exports = { getUserDetailById, updateUserCart, getCartById, vacateUserCart, getUser };
+module.exports = { getUserDetailById, updateUserCart, getCartById, vacateUserCart, getUser, userPayment };

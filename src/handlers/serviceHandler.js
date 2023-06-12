@@ -1,9 +1,10 @@
 const { Service, User } = require('../db.js');
 const { filterServiceId } = require('../controllers/getServicesById.js')
 const { getServices } = require('../controllers/getServices.js')
-const{ createService } =require('../controllers/createService.js')
+const { createService } = require('../controllers/createService.js')
 const { getServiceByName } = require('../controllers/getServiceByName.js')
 const { postReview } = require('../controllers/createReview.js')
+const { contractsServices } = require('../controllers/allContractsService.js')
 
 
 const getServicesDB = async (req, res) => {
@@ -64,7 +65,7 @@ const postService = async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        return res.status(404).json({error});
+        return res.status(404).json({ error });
     }
 };
 
@@ -79,9 +80,20 @@ const postNewReview = async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        return res.status(404).json({error});
+        return res.status(404).json({ error });
     }
 };
 
-module.exports = { getServiceDetailById, getServicesDB, postService, getServicesByName, postNewReview };
+const getContractsService = async (req, res) => {
+    const { idService } = req.params;
+
+    try {
+        const contractsService = await contractsServices(idService)
+        res.status(200).json(contractsService)
+    } catch (error) {
+        res.status(404).json({ error: error.message })
+    }
+}
+
+module.exports = { getServiceDetailById, getServicesDB, postService, getServicesByName, postNewReview, getContractsService };
 

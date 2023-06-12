@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { getUserDetailById, getCartById, updateUserCart, vacateUserCart, getUser } = require('../handlers/userHandler.js');
+const { getUserDetailById, getCartById, updateUserCart, vacateUserCart, getUser, userPayment } = require('../handlers/userHandler.js');
 
 
 const user = Router();
@@ -9,5 +9,6 @@ user.get('/getCart/:idUser', getCartById)
 user.put('/updateCart/:idUser', updateUserCart)
 user.get('/vacateCart/:idUser', vacateUserCart)
 user.get('/', getUser)
+user.get('/payment/:idUser', userPayment)
 
 module.exports = user;
