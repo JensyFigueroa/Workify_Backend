@@ -5,6 +5,7 @@ const { vacateCart } = require('../controllers/vacateCart.js')
 const { allUsersDb } = require('../controllers/allUsersDb.js')
 const { allUsersBuys } = require('../controllers/allUsersBuys.js')
 const { putEnabledUser } = require('../controllers/putEnabledUser.js')
+const { getOnlyUserByEmail } = require('../controllers/getOnlyUserByEmail')
 
 const getUserDetailById = async (req, res) => {
     const { idUser } = req.params;
@@ -20,6 +21,22 @@ const getUserDetailById = async (req, res) => {
     }
 };
 
+const getUserByEmail = async (req, res) => {
+    const { email } = req.query;
+    console.log(email, "email handler");
+
+    console.log('Estoy en el handler de user/email');
+
+    try {
+
+        const userByName = await getOnlyUserByEmail(email)
+
+        res.status(200).json(userByName);
+
+    } catch (error) {
+        return res.status(404).json({ error: error.message });
+    }
+};
 
 const getCartById = async (req, res) => {
     const userId = req.params.idUser
@@ -103,4 +120,4 @@ const enabledUser = async (req, res) => {
 
 
 
-module.exports = { getUserDetailById, updateUserCart, getCartById, vacateUserCart, getUser, userPayment, enabledUser };
+module.exports = { getUserDetailById, updateUserCart, getCartById, vacateUserCart, getUser, userPayment, enabledUser, getUserByEmail };
