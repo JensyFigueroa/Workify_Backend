@@ -5,11 +5,10 @@ const { Service, User } = require('../db.js');
 const getUserById = async (id) => {
 
     // console.log('Entre al controller de detail user');
-    // console.log(id, "id");
+     console.log(id, "id");
 
-    
-
-    const userfiltered = await User.findByPk(id, {
+    try {
+      const userfiltered = await User.findByPk(id, {
         include: Service 
       });
     //    console.log(userfiltered, "user" )
@@ -37,6 +36,11 @@ const getUserById = async (id) => {
       }
 
     return userDetail;
+    } catch (error) {
+      console.log("error contreoler catch userbyid")
+    }
+
+   
 };
 
 module.exports = { getUserById };
