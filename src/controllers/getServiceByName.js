@@ -27,7 +27,7 @@ const getServiceByName = async (name) => {
             imageUrl: service.imageUrl,
             pricePerHour: service.pricePerHour,
             typeService: service.typeService,
-            enbaledS: service.enabledS
+            enabledS: service.enabledS
         }
 
     })
