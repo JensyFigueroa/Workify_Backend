@@ -4,7 +4,6 @@ const { getUserDetailById, getCartById, updateUserCart, vacateUserCart, getUser,
 
 const user = Router();
 
-user.get('/name', getUserByEmail)
 user.get('/:idUser', getUserDetailById)
 user.get('/getCart/:idUser', getCartById)
 user.put('/updateCart/:idUser', updateUserCart)
