@@ -7,5 +7,3 @@ conn.sync({ force: false }).then(async () => {
     console.log("listening at 3001"); // eslint-disable-line no-console
   });
 });
-
-

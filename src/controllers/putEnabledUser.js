@@ -10,15 +10,15 @@ const putEnabledUser = async (idUser) => {
     const enabledU = user.enabled;
     const enabledUpdate = !enabledU;
 
-    const alo = await Service.findAll({
-        where: { UserId: idUser },
-        attributes: ['enabledS']
-    })
-    console.log('alo', alo[0].enabledS);
-    if (alo[0].enabledS === false) {
-        console.log('entre');
-    }
-    const serviceEnabledS = await Service.update(
+    // const alo = await Service.findAll({
+    //     where: { UserId: idUser },
+    //     attributes: ['enabledS']
+    // })
+    // console.log('alo', alo[0].enabledS);
+    // if (alo[0].enabledS === false) {
+    //     console.log('entre');
+    // }
+    await Service.update(
         { enabledS: enabledUpdate },
         {
             where: { UserId: idUser },
@@ -37,9 +37,12 @@ const putEnabledUser = async (idUser) => {
 
 
 
-    const resultTotal = [...updatedUser, ...serviceEnabledS]
+    const [,resultTotal] = updatedUser;
 
-    return resultTotal;
+    console.log('esto es resultTotal: ',resultTotal);
+
+
+    return resultTotal[0];
 }
 
 

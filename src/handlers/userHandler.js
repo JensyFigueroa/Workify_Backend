@@ -6,6 +6,8 @@ const { allUsersDb } = require('../controllers/allUsersDb.js')
 const { allUsersBuys } = require('../controllers/allUsersBuys.js')
 const { putEnabledUser } = require('../controllers/putEnabledUser.js')
 const { getOnlyUserByEmail } = require('../controllers/getOnlyUserByEmail')
+const { checkAdminId } = require('../controllers/checkAdminId')
+
 
 const getUserDetailById = async (req, res) => {
     const { idUser } = req.params;
@@ -118,6 +120,21 @@ const getUserByEmail = async (req, res) => {
     }
 };
 
+const checkAdmin = async (req, res) => {
+    const checkId = req.body;
+console.log('entre al check admin');
+    try {
+
+        const confirm = await checkAdminId(checkId)
+
+        res.status(200).json(confirm);
+
+    } catch (error) {
+        console.log(error);
+        return res.status(404).json({ error });
+    }
+};
 
 
-module.exports = { getUserDetailById, updateUserCart, getCartById, vacateUserCart, getUser, userPayment, enabledUser, getUserByEmail };
+
+module.exports = { getUserDetailById, updateUserCart, getCartById, vacateUserCart, getUser, userPayment, enabledUser, getUserByEmail, checkAdmin };

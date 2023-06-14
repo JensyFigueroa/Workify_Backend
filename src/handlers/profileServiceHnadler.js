@@ -3,6 +3,8 @@ const { enabledService } = require('../controllers/putServiceProfile.js')
 const profilePutServiceHandler = async (req, res) => {
     const { idService } = req.params;
     const { nameService } = req.body
+    console.log('esto es el idService: ',idService);
+    console.log('esto es el nameService: ',nameService);
     try {
 
         const serviceEnabled = await enabledService(idService, nameService)

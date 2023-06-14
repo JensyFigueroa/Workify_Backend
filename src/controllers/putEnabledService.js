@@ -3,7 +3,7 @@ const { Service, User } = require('../db.js');
 const serviceEnabledS = async (idService, nameService) => {
 
 
-    const pro = await User.findByPk(idService, { include: Service })
+    const pro = await Service.findByPk(idService)
     if (!pro) {
         throw new Error(`There is no service in this User`)
     }
@@ -33,8 +33,13 @@ const serviceEnabledS = async (idService, nameService) => {
         }
     );
 
+    console.log('updatedService: ',updatedService);
 
-    return updatedService;
+    const [,objectService]=updatedService
+
+    console.log('esto es objectService', objectService);
+
+    return objectService[0];
 };
 
 

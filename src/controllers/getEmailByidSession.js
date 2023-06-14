@@ -2,6 +2,7 @@ require('dotenv').config();
 const Stripe = require('stripe')
 const { Service, User } = require('../db.js');
 const {KEY_STRIPE}=process.env;
+const { v4 } = require('uuid')
 
 
 const getEmailByidSession = async(sessionId, idUser) => {
@@ -49,9 +50,9 @@ const getEmailByidSession = async(sessionId, idUser) => {
             const invoice = {
               pay: (filaService.pricePerHour*service.hours),
               nameService: service.nameService,
-              contracthours: service.pricePerHour,
               idService: service.idService,
-              typeService: filaService.typeService
+              typeService: filaService.typeService,
+              id:v4()
             }
       
       
