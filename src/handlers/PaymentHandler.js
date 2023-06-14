@@ -39,10 +39,13 @@ const successfulPayment = async (req,res)=>{
 }
 
 const getDataPays = async (req,res)=>{
+    console.log('entre al handler de Payment, en especifico al getDatapays');
         try {
+            
             const dataPays= await getTotalPays();
             res.status(200).json(dataPays)
         } catch (error) {
+            console.log('este es el error: ',error);
             res.status(400).json(error.message)
         }
 }

@@ -4,6 +4,8 @@ const getTotalPays = async()=>{
 
     const allUsers = await User.findAll()
 
+    console.log('esto es lo que esta en allUsers: ',allUsers);
+
     const allPaysUsers = [];
 
     await Promise.all(allUsers.map(async user=>{
