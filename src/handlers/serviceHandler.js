@@ -99,6 +99,8 @@ const getContractsService = async (req, res) => {
 const putServiceEnabledS = async (req, res) => {
     const { idService } = req.params;
     const { nameService } = req.body
+    console.log('esto es idService',idService);
+    console.log('esto es nameService',nameService);
 
     try {
         const enabledService = await serviceEnabledS(idService, nameService)

@@ -1,20 +1,33 @@
 const { Service, User } = require('../db.js');
 
 const putEnabledUser = async (idUser) => {
-    const user = await User.findByPk(idUser)
+    const user = await User.findByPk(idUser, { include: Service });
 
     if (!user) {
-        throw new Error('This user does not exist')
+        throw new Error('This user does not exist');
     }
 
-    const enabledU = user.enabled
+    const enabledU = user.enabled;
+    const enabledUpdate = !enabledU;
 
-    const enabledUpdate = !enabledU
-
-    const userEnabled = await User.update(
+    // const alo = await Service.findAll({
+    //     where: { UserId: idUser },
+    //     attributes: ['enabledS']
+    // })
+    // console.log('alo', alo[0].enabledS);
+    // if (alo[0].enabledS === false) {
+    //     console.log('entre');
+    // }
+    await Service.update(
+        { enabledS: enabledUpdate },
         {
-            enabled: enabledUpdate
-        },
+            where: { UserId: idUser },
+            returning: true
+        }
+    )
+
+    const updatedUser = await User.update(
+        { enabled: enabledUpdate },
         {
             where: { id: idUser },
             returning: true,
@@ -22,8 +35,15 @@ const putEnabledUser = async (idUser) => {
         }
     )
 
-    return userEnabled
 
-};
 
-module.exports = { putEnabledUser }
+    const [,resultTotal] = updatedUser;
+
+    console.log('esto es resultTotal: ',resultTotal);
+
+
+    return resultTotal[0];
+}
+
+
+module.exports = { putEnabledUser };
