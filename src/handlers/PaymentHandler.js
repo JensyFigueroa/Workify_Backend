@@ -1,6 +1,7 @@
 const {paymentValidation} = require('../controllers/paymentValidation')
 const {newPayment} = require('../controllers/newPayment')
 const {getEmailByidSession}= require('../controllers/getEmailByidSession')
+const { getTotalPays } = require('../controllers/getTotalPays')
 
 const checkOutPayment = async (req, res)=>{
     const {id, amount, cartItems, userId}=req.body;
@@ -26,9 +27,10 @@ const newCheckOut = async (req, res)=>{
 }
 
 const successfulPayment = async (req,res)=>{
-    const { idSession }=req.query
+    const { idSession, idUser }=req.query
+    console.log(idUser,' este es el id user');
     try {
-        const getEmails = await getEmailByidSession(idSession);
+        const getEmails = await getEmailByidSession(idSession, idUser);
         console.log('getEmails',getEmails);
         res.status(200).json(getEmails)
     } catch (error) {
@@ -36,4 +38,13 @@ const successfulPayment = async (req,res)=>{
     }
 }
 
-module.exports = {checkOutPayment, newCheckOut, successfulPayment};
+const getDataPays = async (req,res)=>{
+        try {
+            const dataPays= await getTotalPays();
+            res.status(200).json(dataPays)
+        } catch (error) {
+            res.status(400).json(error.message)
+        }
+}
+
+module.exports = {checkOutPayment, newCheckOut, successfulPayment, getDataPays};

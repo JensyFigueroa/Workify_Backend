@@ -1,9 +1,11 @@
 const { Service, User } = require('../db.js');
 const { filterServiceId } = require('../controllers/getServicesById.js')
 const { getServices } = require('../controllers/getServices.js')
-const{ createService } =require('../controllers/createService.js')
+const { createService } = require('../controllers/createService.js')
 const { getServiceByName } = require('../controllers/getServiceByName.js')
 const { postReview } = require('../controllers/createReview.js')
+const { contractsServices } = require('../controllers/allContractsService.js')
+const { serviceEnabledS } = require('../controllers/putEnabledService.js')
 
 
 const getServicesDB = async (req, res) => {
@@ -64,7 +66,7 @@ const postService = async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        return res.status(404).json({error});
+        return res.status(404).json({ error });
     }
 };
 
@@ -79,9 +81,35 @@ const postNewReview = async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        return res.status(404).json({error});
+        return res.status(404).json({ error });
     }
 };
 
-module.exports = { getServiceDetailById, getServicesDB, postService, getServicesByName, postNewReview };
+const getContractsService = async (req, res) => {
+    const { idService } = req.params;
+
+    try {
+        const contractsService = await contractsServices(idService)
+        res.status(200).json(contractsService)
+    } catch (error) {
+        res.status(404).json({ error: error.message })
+    }
+}
+
+const putServiceEnabledS = async (req, res) => {
+    const { idService } = req.params;
+    const { nameService } = req.body
+    console.log('esto es idService',idService);
+    console.log('esto es nameService',nameService);
+
+    try {
+        const enabledService = await serviceEnabledS(idService, nameService)
+        res.status(200).json(enabledService)
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+
+}
+
+module.exports = { getServiceDetailById, getServicesDB, postService, getServicesByName, postNewReview, getContractsService, putServiceEnabledS };
 

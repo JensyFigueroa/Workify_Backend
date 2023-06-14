@@ -68,9 +68,13 @@ const newPayment = async ( cartsItems) =>{
         line_items:itemList,
         metadata:metadata,
         mode: 'payment',
-        success_url: 'http://127.0.0.1:5173/payment/success?session_id={CHECKOUT_SESSION_ID}',
-        cancel_url: 'http://127.0.0.1:5173/cart'
+        //success_url: 'http://127.0.0.1:5173/payment/success?session_id={CHECKOUT_SESSION_ID}',
+        success_url: 'https://workify-alpha.vercel.app/payment/success?session_id={CHECKOUT_SESSION_ID}',
+        //cancel_url: 'http://127.0.0.1:5173/cart'
+        cancel_url: 'https://workify-alpha.vercel.app/cart'
     })
+
+
 
     return session;
 
