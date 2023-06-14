@@ -3,7 +3,7 @@ const { Service, User } = require('../db.js');
 const checkAdminId = async (body) => {
   const { id } = body;
 //console.log(id, "id de la personaque se logeo");
-if( id === "7rcbhZc7hvRk42ZbFGC5txDynVG3" ){
+if( id === "7rcbhZc7hvRk42ZbFGC5txDynVG3" || id === "CQsoi1akLESx1VaBrKsDRkVhAiE3" || id === "2F0nWmNmtuOTfpgy7672EZcoSll2" ){
     return {
     bolean: true,
      url: "https://workify-admin-dashboard.vercel.app/"
