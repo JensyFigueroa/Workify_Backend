@@ -18,7 +18,7 @@ const getServices = async () => {
       description:
         "We have the best staff and know how to take care of you. Get your look perfect now!",
       pricePerHour: 10,
-      typeService: "Hair Salon",
+      typeService: "Childcare",
       reviews: [
         {
           name: "William Neiva",
@@ -45,7 +45,7 @@ const getServices = async () => {
       description:
         "The spaces that surround us influence in our emotions and that is why we are dedicated to transforming them into welcoming places",
       pricePerHour: 50,
-      typeService: "Construction",
+      typeService: "Masonry",
       reviews: [
         {
           name: "Juan Pablo Merida",
@@ -72,7 +72,7 @@ const getServices = async () => {
       description:
         "Instantly Professional Plumbers Request Estimates for your Home",
       pricePerHour: 30,
-      typeService: "Sewage",
+      typeService: "Plumbing",
       reviews: [
         {
           name: "Pedro Lopez",
@@ -100,7 +100,7 @@ const getServices = async () => {
       description:
         "Professional house and apartment painter. I work with the highest quality materials. Excellent finishes",
       pricePerHour: 40,
-      typeService: "Paint",
+      typeService: "Painting",
       reviews: [
         {
           name: "Camilo Suaza",
@@ -134,7 +134,7 @@ const getServices = async () => {
       description:
         "Professional study specialized in Corporate, Industrial and Gastronomic Architecture. Combining a reputation for innovation with a history of excellence in project and construction management",
       pricePerHour: 80,
-      typeService: "Engineering",
+      typeService: "Masonry",
       reviews: [
         {
           name: "Maria Adelaida Gonzalez",
@@ -168,7 +168,7 @@ const getServices = async () => {
       description:
         "Replacement or updating of electrical panels, Installation of security systems",
       pricePerHour: 70,
-      typeService: "Electrical",
+      typeService: "Electricity",
       reviews: [
         {
           name: "John Smith",
@@ -194,7 +194,7 @@ const getServices = async () => {
       description:
         "Grooming and hairdressing for dogs, Bathing and drying for dogs, Hygiene of ears for dogs",
       pricePerHour: 50,
-      typeService: "Dog Groomer",
+      typeService: "Pet Care",
       reviews: [
         {
           name: "Pedro Capone",
@@ -220,7 +220,7 @@ const getServices = async () => {
       description:
         "Hair shine, straightening, balayage technique, color or shine bath, light bath, hair dye",
       pricePerHour: 65,
-      typeService: "Hair Salon",
+      typeService: "Childcare",
       reviews: [
         {
           name: "John Wick",
@@ -247,7 +247,7 @@ const getServices = async () => {
       description:
         "Compost, Weed control, Lawn cutting and maintenance, design and supply of materials and plants for terraces",
       pricePerHour: 123,
-      typeService: "Gardener",
+      typeService: "Gardening",
       reviews: [
         {
           name: "Sam Smith",
@@ -274,7 +274,7 @@ const getServices = async () => {
       description:
         "Installation of air conditioning systems,Installation of heating systems,Installation of thermostats",
       pricePerHour: 214,
-      typeService: "Air Conditioning Repair",
+      typeService: "Computer and Electronics Repair",
       reviews: [
         {
           name: "Pedro Lopez",
@@ -301,7 +301,7 @@ const getServices = async () => {
       ],
       description: "Auto mechanic, motorcycle mechanic",
       pricePerHour: 316,
-      typeService: "Mechanic",
+      typeService: "Automobile Repair",
       reviews: [
         {
           name: "Juan Lopez",
@@ -329,7 +329,7 @@ const getServices = async () => {
       description:
         "Battery, wheel alignment, oil change, sports, Chopper, electrical repair",
       pricePerHour: 259,
-      typeService: "Mechanic",
+      typeService: "Automobile Repair",
       reviews: [
         {
           name: "Chris Smith",
@@ -354,7 +354,7 @@ const getServices = async () => {
       ],
       description: "Interior designer for houses",
       pricePerHour: 59,
-      typeService: "Interior Decoration",
+      typeService: "Interior Design and Decoration",
       reviews: [
         {
           name: "Daniel Ocampo",
@@ -382,7 +382,7 @@ const getServices = async () => {
       description:
       "I offer design and construction services for architectural projects. Experience in residential and commercial.",
       pricePerHour: 150,
-      typeService: "Architect",
+      typeService: "Interior Design and Decoration",
       reviews: [
         {
           name: "Gonzalo Leguiza",
@@ -410,7 +410,7 @@ const getServices = async () => {
       ],
       description: "I offer civil and structural engineering services. Experience in project design and supervision.",
       pricePerHour: 140,
-      typeService: "Engineering",
+      typeService: "Interior Design and Decoration",
       reviews: [
         {
           name: "Pepe guardiola",
@@ -438,7 +438,7 @@ const getServices = async () => {
       ],
       description: "I offer hair cutting, styling, and hair treatments services. Specialized in various styles and trends.",
       pricePerHour: 30,
-      typeService: "Hair Salon",
+      typeService: "Childcare",
       reviews: [
         {
           name: "Daniel  Ramírez",
@@ -474,7 +474,7 @@ const getServices = async () => {
       ],
       description: "I offer services in construction and remodeling of homes and buildings.",
       pricePerHour: 90,
-      typeService: "Construction",
+      typeService: "Masonry",
       reviews: [
         {
           name: "Benjamín  Fernández",
@@ -509,7 +509,7 @@ const getServices = async () => {
       ],
       description: "I offer general and specialized dental services. High-quality treatments with modern technology.",
       pricePerHour: 100,
-      typeService: "Dentist",
+      typeService: "Childcare",
       reviews: [
         {
           name: "Valentina  López",
@@ -544,7 +544,7 @@ const getServices = async () => {
       ],
       description: "I offer services for vehicle repair and maintenance. Experience with different brands and models.",
       pricePerHour: 40,
-      typeService: "Mechanic",
+      typeService: "Automobile Repair",
       reviews: [
         {
           name: "Sofía  Martínez",
@@ -578,7 +578,7 @@ const getServices = async () => {
       ],
       description: "I offer gardening services for the design, maintenance, and landscaping of residential and commercial gardens",
       pricePerHour: 50,
-      typeService: "Gardener",
+      typeService: "Gardening",
       reviews: [
         {
           name: "Pedro gomez",
@@ -611,7 +611,7 @@ const getServices = async () => {
       ],
       description: "I offer professional photography services to capture the most special moments of your wedding",
       pricePerHour: 95,
-      typeService: "Photography",
+      typeService: "Catering and Event Service",
       reviews: [
         {
           name: "Kelvin Torrres",
@@ -644,7 +644,7 @@ const getServices = async () => {
       ],
       description: "I offer personalized training services to help you achieve your fitness goals",
       pricePerHour: 60,
-      typeService: "Personal Training",
+      typeService: "Personal Training and Fitness",
       reviews: [
         {
           name: "Juan Albares",
@@ -678,7 +678,7 @@ const getServices = async () => {
       ],
       description: "I offer professional event planning services for weddings, parties, and corporate events",
       pricePerHour: 75,
-      typeService: "Event Planning",
+      typeService: "Catering and Event Service",
       reviews: [
         {
           name: "Erika Gutierrrez",
@@ -711,7 +711,7 @@ const getServices = async () => {
       ],
       description: "I offer creative graphic design services for logos, branding, and marketing materials",
       pricePerHour: 65,
-      typeService: "Graphic Design",
+      typeService: "Computer and Electronics Repair",
       reviews: [
         {
           name: "Jennifer Brown",
@@ -744,7 +744,7 @@ const getServices = async () => {
       ],
       description: "I offer accurate and professional translation services for various languages.",
       pricePerHour: 90,
-      typeService: "Translation",
+      typeService: "Translation and Interpretation Service",
       reviews: [
         {
           name: "Luis Hernandez",
@@ -776,7 +776,7 @@ const getServices = async () => {
       ],
       description: "I offer gas installation and maintenance services. I am a professional in my field with many years of experience.",
       pricePerHour: 60,
-      typeService: "Gas Service",
+      typeService: "Plumbing",
       reviews: [
         {
           name: "Megan Wilson",
@@ -809,7 +809,7 @@ const getServices = async () => {
       ],
       description: "I offer custom website development services for businesses and individuals.",
       pricePerHour: 95,
-      typeService: "Website Development",
+      typeService: "Computer and Electronics Repair",
       reviews: [
         {
           name: "David Thompson",
@@ -841,7 +841,7 @@ const getServices = async () => {
       ],
       description: "I offer tutoring services for various subjects and grade levels.",
       pricePerHour: 65,
-      typeService: "Tutoring",
+      typeService: "Childcare",
       reviews: [
         {
           name: "Sophia Anderson",
@@ -874,7 +874,7 @@ const getServices = async () => {
       ],
       description: "I offer legal consultation services for individuals and businesses.",
       pricePerHour: 80,
-      typeService: "Legal Consultation",
+      typeService: "Translation and Interpretation Service",
       reviews: [
         {
           name: "Robert Davis",
@@ -900,7 +900,7 @@ const getServices = async () => {
       ],
       description: "I offer catering services for events, parties, and special occasions.",
       pricePerHour: 45,
-      typeService: "Catering",
+      typeService: "Catering and Event Service",
       reviews: [
         {
           name: "Andrew Davis",
