@@ -7,7 +7,9 @@ const getTotalPays = async()=>{
     const allPaysUsers = [];
 
     await Promise.all(allUsers.map(async user=>{
-        await user.buys.map(buy=>allPaysUsers.push(buy))
+        if (user.buys!==null){
+            await user.buys.map(buy=>allPaysUsers.push(buy))
+        }
     }))
 
     console.log('esto es para las compras ... ',allPaysUsers);
