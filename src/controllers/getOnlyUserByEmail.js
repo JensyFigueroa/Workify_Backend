@@ -13,7 +13,7 @@ const getOnlyUserByEmail = async (email) => {
          include: Service    
     });
 console.log(userfiltered[0], "sisas");
-    // const {  id, name, country, city, phone, adminStatus, description, buys, Services, imageUrl, enabled } = userfiltered;
+   // const {  id, name, country, city, phone, adminStatus, description, buys, Services, imageUrl, enabled } = userfiltered;
 
     // const userDetail =  { 
     //   id,
@@ -32,7 +32,7 @@ console.log(userfiltered[0], "sisas");
 
     //console.log(services, "que tengo en la base de datos filtrados")
 
-    return userfiltered[0];
+    return userfiltered;
 
 }
 module.exports = { getOnlyUserByEmail }
